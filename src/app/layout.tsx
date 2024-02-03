@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,15 @@ export default function RootLayout({
             action="/items"
             className=" m-auto flex max-w-screen-xl flex-1 gap-4 px-4"
           >
-            <input className="h-8 flex-1 px-2 py-1 text-white"></input>
+            <Link href="/" className="text-yellow-900 items-center">
+              Mercado
+            </Link>
+            <input
+              name="search"
+              type="text"
+              className="h-8 flex-1 px-2 py-1 text-white"
+            ></input>
+
             <button className="h-8 bg-gray-300 px-2 py-1  text-slate-700">
               Buscar
             </button>
