@@ -8,7 +8,7 @@ export default async function ItemsPage({
   const item = await api.item.fetch(id);
   return (
     <section className="grid gap-2">
-      <img alt={item.title} src={item.thumbnail} />
+      <img className="h-80 w-80 " alt={item.title} src={item.thumbnail} />
 
       <p>{item.title}</p>
       <hr />
